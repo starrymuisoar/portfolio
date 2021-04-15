@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+* {margin:0; padding:0}
+li {list-style:none;}
+a {text-decoration:none; color:#999}
+
+.container {background:#949597}
+
+header {}
+header .logo {}
+header .logo img {}
+header nav {}
+header nav .hd2 {}
+header nav .navlist {}
+header nav .navlist > li {}
+header nav .navlist > li > a {}
+
+.main_set {}
+.main_set .main_img {}
+.main_set .main_img img {}
+.main_set .hd3 {}
+
+.about_set {}
+
+.web_set {}
+
+.art_set {}
+
+footer {}
+footer .footer_inner {}
