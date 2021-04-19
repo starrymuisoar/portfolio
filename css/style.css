@@ -1,26 +1,55 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap');
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
-* {margin:0; padding:0; font-family:"맑은 고딕"}
-li {list-style:none;}
-a {text-decoration:none; color:#fff}
+* {margin:0; padding:0; font-family:'roboto'}
+li {list-style:none}
+a {text-decoration:none; color:#f5e35d}
+body {min-width:1280px}
 
 .container {background:#949597}
 
-header {}
-header .logo {}
-header .logo img {}
-header nav {}
-header nav .hd2 {}
-header nav .navlist {}
-header nav .navlist > li {}
-header nav .navlist > li > a {}
+header {height:100px}
+header .header_inner {width:1280px; height:100%; position:relative; margin:0 auto}
+header .header_inner .logo {position:absolute; top:42px; left:10px; height:50px; width:113px}
+header .header_inner .logo img {height:100%; width:100%; overflow:hidden}
 
-.main_set {}
-.main_set .main_img {}
-.main_set .main_img img {}
-.main_set .hd3 {}
+header .header_inner nav {position:absolute; bottom:0; right:24px}
+header .header_inner nav .hd2 {display:none}
+header .header_inner nav .navlist {overflow:hidden}
+header .header_inner nav .navlist > li {float:left; font-weight:500; font-size:18px}
+header .header_inner nav .navlist > li + li {margin-left:20px}
+header .header_inner nav .navlist > li > a {padding:15px 20px}
+header .header_inner nav .navlist > li > a:hover {text-decoration:underline;}
 
-.about_set {}
+.main_set {height:980px; width:1280px; position:relative; margin:0 auto}
+.main_set .main_img {background:url('../img/back.png') no-repeat}
+.main_set .main_img img {display:block; margin:0 auto; padding:90px 0 90px; height:800px; width:870px}
+
+.about_set {position:relative; height:980px; width:1280px; margin:0 auto;  color:#f5e35d}
+.about_set .name_set {position:absolute; top:187px; left:120px; overflow:hidden}
+.about_set .name_set .hd4 {font:normal 60px "roboto"; letter-spacing:0.05em; font-weight:800}
+.about_set .name_set .name {font:normal 14pt "nanumsquare"; letter-spacing:-0.02em; line-height:24px; margin-top:20px}
+
+.about_set .info_set {position:absolute; top:440px; left:120px}
+.about_set .info_set .info_wrap {}
+.about_set .info_set .info_wrap > li {float:left}
+.about_set .info_set .info_wrap > li > .info + .info {margin-top:40px}
+.about_set .info_set .info_wrap > li > .info .hd5 {font:normal 24px "roboto"; letter-spacing:0.04em; font-weight:600}
+.about_set .info_set .info_wrap > li > .info .hd5::after {content:""; display:block; margin-top:8px; border-bottom:solid 1px #f5e35d}
+.about_set .info_set .info_wrap > li > .info > p {font:normal 100%/1.2 "nanumsquare"; letter-spacing:-0.02em; line-height:24px; margin-top:15px}
+.about_set .info_set .info_wrap > li + li {margin-left:130px}
+
+.skillset {}
+.skillset > li {}
+.skillset > li .left {}
+.skillset > li .right {}
+.skillset > li > ul > li {}
+.skillset > li > ul > li > p {}
+.skillset > li > ul > li > p .bar_wrap {}
+.skillset > li > ul > li > p .bar_wrap .bar_fill {}
+
+
 
 .web_set {}
 
