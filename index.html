@@ -2,7 +2,8 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>AR Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>HANAHREUM</title>
 <link href="css/style.css" type="text/css" rel="stylesheet" />
 <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
@@ -14,14 +15,22 @@
 		<header>
 			<div class="header_inner">
 				<div class="logo">
-					<a href="#"><img src="img/logo.png" alt="로고" /></a>
+					<h1 class="hd1">
+						<a href="#"><img src="img/logo.png" alt="로고" /></a>
+					</h1>
 				</div>
 				<nav>
 					<h2 class="hd2">목차</h2>
 					<ul class="navlist">
 						<li><a href="#">About</a></li>
-						<li><a href="#">Web</a></li>
-						<li><a href="#">Artworks</a></li>
+						<li>
+							<a href="#">Portfolio</a>
+							<ul class="submenu">
+								<li><a href="#">Web1</a></li>
+								<li><a href="#">Web2</a></li>
+								<li><a href="#">Artworks</a></li>
+							</ul>
+						</li>
 						<li><a href="#">Contact</a></li>
 					</ul>
 				</nav>
@@ -29,107 +38,97 @@
 		</header>
 		<div class="main_set">
 			<div class="main_img">
-				<img src="img/main.png" alt="메인이미지" />
+				<div class="imgset">
+					<img src="img/main_img.png" alt="메인이미지" />
+				</div>
+				<div class="titset">
+					<div class="tit">
+						<img src="img/main_tit.png" alt="메인타이틀">
+					</div>
+					<div class="tit_port">
+						<span><p>2020-2021 Portfolio</p></span>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="about_set">
-			<div class="name_set">
-				<h4 class="hd4">HAN AH REUM</h4>	
-				<div class="name">
-					<p>1992 . 11 . 08<br />
-					starrymuisoar@kakao.com<br />
-					010 . 9122 . 7587</p>
-				</div>
-			</div>
-			<div class="info_set">
-				<ul class="info_wrap">
-					<li>
-						<div class="info">
+			<div class="about_top">
+				<div class="about_left">
+					<h4 class="hd4">HAN AH REUM</h4>	
+					<div class="name">
+						<p>1992 . 11 . 08<br />
+						starrymuisoar@kakao.com<br />
+						010 . 9122 . 7587</p>
+					</div>
+					<ul class="left_wrap">
+						<li>
 							<h5 class="hd5">Education</h5>
 							<p>11.03 진해여자고등학교 졸업<br />
 							16.08 동아대학교 건축공학과 졸업</p>
-						</div>
-						<div class="info">	
+						</li>
+						<li>
 							<h5 class="hd5">Experience</h5>
 							<p>16.07 ~ 16.12 (주)현대건설 동해남부선 제 1공구 건축부<br />
 							17.02 ~ 17.09 (주)Colors of Life 도쿄 근무<br />
 							19.10 ~ 20.03 (주)에스티유니타스 부산 영단기 근무</p>
-						</div>
-					</li>
-					<li>
-						<div class="info">
-							<h5 class="hd5">Skill</h5>
-							<ul class="skillset">
-									<li>
-										<ul class="left">
-											<li>
-												<p>Photoshop</p>
-												<div class="bar_wrap">
-													<span class="bar_fill on"></span>
-												</div>
-											</li>
-											<li>
-												<p>Illustrator</p>
-												<div class="bar_wrap">
-													<span class="bar_fill"></span>
-												</div>
-											</li>
-											<li>
-												<p>Premere Pro</p>
-												<div class="bar_wrap">
-													<span class="bar_fill"></span>
-												</div>
-											</li>
-											<li>
-												<p>After Effect</p>
-												<div class="bar_wrap">
-													<span class="bar_fill"></span>
-												</div>
-											</li>
-										</ul>
-									</li>
-									<li>
-										<ul class="right">
-											<li>
-												<p>HTML</p>
-												<div class="bar_wrap">
-													<span class="bar_fill"></span>
-												</div>
-											</li>
-											<li>
-												<p>CSS</p>
-												<div class="bar_wrap">
-													<span class="bar_fill"></span>
-												</div>
-											</li>
-											<li>
-												<p>JQuery</p>
-												<div class="bar_wrap">
-													<span class="bar_fill"></span>
-												</div>
-											</li>
-										</ul>
-									</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="about_right">
+					<span>
+						<img src="img/about_img.png" alt="어바웃 이미지" />
+					</span>
+				</div>
 			</div>
-		</div>
-		<div class="web_set">
-			<div class="web">
-				<ul class="web_slides">
+			<div class="about_bottom">
+				<h5 class="hd5">Skill</h5>
+				<ul class="skillset">
 					<li>
-						<ul class="web_inner">
+				 		<ul class="skill_left">
 							<li>
-								<div class="web1">
-									<img src="img/" alt="웹디자인1" />
+								<p>Photoshop</p>
+								<div class="bar_wrap">
+									<span class="bar_fill"></span>
 								</div>
 							</li>
 							<li>
-								<div class="txt1">
-									<a href="#"></a>
-									<a href="#"></a>
+								<p>Illustrator</p>
+								<div class="bar_wrap">
+									<span class="bar_fill"></span>
+								</div>
+							</li>
+							<li>
+								<p>Premere Pro</p>
+								<div class="bar_wrap">
+									<span class="bar_fill"></span>
+								</div>
+							</li>
+							<li>
+								<p>After Effect</p>
+								<div class="bar_wrap">
+									<span class="bar_fill"></span>
+								</div>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="skill_right">
+							<li>
+								<p>HTML</p>
+								<div class="bar_wrap">
+									<span class="bar_fill"></span>
+								</div>
+							</li>
+							<li>
+								<p>CSS</p>
+								<div class="bar_wrap">
+									<span class="bar_fill"></span>
+								</div>
+							</li>
+							<li>
+								<p>JQuery</p>
+								<div class="bar_wrap">
+									<span class="bar_fill"></span>
 								</div>
 							</li>
 						</ul>
@@ -137,25 +136,94 @@
 				</ul>
 			</div>
 		</div>
-		<div class="art_set">
-			<div class="arts">
-				<ul class="slides">
-					<li><a href="#"><img src="img/slides/img1" alt="아트웍 오스카" /></a></li>
-					<li><a href="#"><img src="img/slides/img2" alt="잡지 편집 디자인" /></a></li>
-					<li><a href="#"><img src="img/slides/img3" alt="롯데 포스터 디자인" /></a></li>
-					<li><a href="#"><img src="img/slides/img4" alt="리터칭 이미지 광고" /></a></li>
-					<li><a href="#"><img src="img/slides/img5" alt="영화 포스터 디자인" /></a></li>
-					<li><a href="#"><img src="img/slides/img6" alt="레트로 로고 디자인" /></a></li>
+		<div class="web_set">
+			<div class="webtit">
+				<h4 class="hd4">WEB DISIGN &amp; PUBLISHING</h4>
+			</div>
+			<div class="web_inner">	
+				<ul class="web_list">
+					<li>  
+						<div class="design">
+							<img src="img/" alt="웹디자인1" />
+						</div>
+						<div class="txt">
+							<p class="web_tit">삐아 홈페이지 리뉴얼</p>
+							<p>반응형</p>
+							<p>고정형으로 제작된 기존 홈페이지를 반응형으로 적용 및 레이아웃 새롭게 배치하여 리뉴얼 했습니다.</p>
+							<span><a href="#" class="btn_more">&gt;more</a></span>
+						</div>
+					</li>
+					<li>
+						<div class="design">
+							<img src="img/" alt="웹디자인2" />
+						</div>
+						<div class="txt">
+							<p class="web_tit">준비중입니다.</p>
+							<p>-</p>
+							<p><br />
+								준비중입니다.<br />
+								<br />
+							</p>
+							<span><a href="#" class="btn_more">&gt;more</a></span>
+						</div>
+					</li>
 				</ul>
-				<div class="btn_slides">
-					<a href="#" class="btn_slides_prev off">&lt;</a>
-					<a href="#" class="btn_slides_next">&gt;</a>
-				</div>
+			</div>
+		</div>
+		<div class="art_set">
+			<div class="arttit">
+				<h4 class="hd4">ARTWORKS</h4>
+			</div>
+			<div class="art_inner">
+				<ul class="slides">
+					<li>
+						<img src="img/slides/img1.png" alt="아트웍 오스카" />
+						<p class="art_tit">Poster artwork</p>
+						<p class="art_tool">photoshop</p>
+						<span><a href="#" class="btn_more_2">&gt;more</a></span>
+					</li>
+					<li>
+						<img src="img/slides/img2.png" alt="잡지 편집 디자인" />
+						<p class="art_tit">Artwork &#43; Editorial</p>
+						<p class="art_tool">photoshop</p>
+						<span><a href="#" class="btn_more_2">&gt;more</a></span>
+					</li>
+					<li>
+						<img src="img/slides/img3.png" alt="레트로 포스터 디자인" />
+						<p class="art_tit">Poster artwork</p>
+						<p class="art_tool">photoshop</p>
+						<span><a href="#" class="btn_more_2">&gt;more</a></span>
+					</li>
+					<li>
+						<img src="img/slides/img4.png" alt="영화 포스터 편집" />
+						<p class="art_tit">Poster artwork</p>
+						<p class="art_tool">photoshop</p>
+						<span><a href="#" class="btn_more_2">&gt;more</a></span>
+					</li>
+					<li>
+						<img src="img/slides/img5.png" alt="얼굴 리터칭 광고" />
+						<p class="art_tit">Banner ad</p>
+						<p class="art_tool">photoshop</p>
+						<span><a href="#" class="btn_more_2">&gt;more</a></span>
+					</li>
+					<li>
+						<img src="img/slides/img6.png" alt="일러스트 3D 활용 디자인" />
+						<p class="art_tit">Banner ad</p>
+						<p class="art_tool">Illustrator</p>
+						<span><a href="#" class="btn_more_2">&gt;more</a></span>
+					</li>
+					<li>
+						<img src="img/slides/img7.png" alt="로고 디자인" />
+						<p class="art_tit">Logo design</p>
+						<p class="art_tool">Illustrator</p>
+						<span><a href="#" class="btn_more_2">&gt;more</a></span>
+					</li>
+				</ul>
 			</div>
 		</div>
 		<footer>
 			<div class="footer_inner">
-				<span>Copyrightⓒ 2021 Han Ah-Reum All rights reserved.</span>
+				<span><p>Copyrightⓒ 2021 Han Ah-Reum All rights reserved.</p></span>
 			</div>
 		</footer>
 	</div>
