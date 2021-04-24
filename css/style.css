@@ -9,7 +9,8 @@ body {
 	padding-top:100px;
 }
 
-.container {}
+.container {
+}
 
 header {
 	position:fixed;
@@ -35,6 +36,7 @@ header .header_inner .logo .hd1 {
 	bottom:10px;
 	left:2.03%;
 	width:7.81%;
+	min-width:50px;
 	overflow:hidden;
 }
 
@@ -228,7 +230,7 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 }
 
 .main_set {
-	height:980px;
+	height:calc(100vh - 100px);
 	width:100%;
 	background:url('../img/back.png') repeat;
 	margin:0;
@@ -238,7 +240,7 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 .main_set .main_img {
 	display:flex;
 	width:66.67%;
-	height:980px;
+	height:calc(100vh - 100px);
 	justify-content:center;
 	margin:0 auto;
 }
@@ -253,9 +255,9 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 .main_set .main_img .imgset img {
 	position:absolute;
 	max-width:100%;
-	min-width:600px;
 	bottom:0;
 	left: 1.25%;
+	min-width:420px;
 }
 
 .main_set .main_img .titset {
@@ -274,10 +276,10 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 .main_set .main_img .titset .tit img {
 	display:flex;
 	position:absolute;
-	bottom:442px;
+	top:150px;
 	right:0;
 	width:100%;
-	min-width:500px;
+	min-width:300px;
 }
 
 .main_set .main_img .titset .tit_port {	
@@ -300,7 +302,7 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 }
 
 .about_set {
-	height:980px;
+	height:calc(100vh - 100px);
 }
 
 .about_set .about_top {
@@ -334,7 +336,7 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 	line-height:1.5rem;
 	font-size:1.3rem;
 	padding-left:1%;
-	padding-bottom:30px;
+	padding-bottom:3%;
 }
 
 .about_set .about_top .about_left .left_wrap {
@@ -388,13 +390,13 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 .about_set .about_bottom .hd5 {
 	font-size:1.6rem;
 	font-family:'noto-Bold';
-	margin:0 0 5px 0;
+	margin:0 0 10px 0;
 }
 
 .about_set .about_bottom .skillset > li {
 	float:left;
 	font-family:'noto-Regular';
-	line-height:2rem;
+	line-height:1.8rem;
 	font-size:1.2rem;
 	width:35%;
 }
@@ -402,22 +404,22 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 .about_set .about_bottom .skillset > li > ul > li > .bar_wrap {
 	display:inline-block;
 	width:80%;
-	height:20px;
+	height:15px;
 	border:2px solid #d84863;
 	border-radius:10px;
-	line-height:20px;
+	line-height:15px;
 }
 
 .about_set .about_bottom .skillset > li > ul > li > .bar_wrap .bar_fill {
 	display:inline-block;
 	width:80%;
-	height:20px;
+	height:100%;
 	background:#d84863;
 	border-radius:7px;
 }
 
 .web_set {
-	height:980px;
+	height:calc(100vh - 100px);
 }
 
 .web_set .webtit {
@@ -496,7 +498,7 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 }
 
 .art_set {
-	height:880px;
+	height:calc(100vh - 200px);
 	background:#bebab9;
 }
 
