@@ -1,61 +1,69 @@
-$(function(){
-	$("nav .mbtn").on("click", function(){
-		if($("nav").hasClass("on")){
-			$("nav").removeClass("on");
-		} else{
-			$("nav").addClass("on");
-		}
-	}); 
-	$(".navlist > li").find(".dp2").parent().addClass("act");
-	$(".navlist > li > a").on("click", function(){
-		var _this = $(this);
-		var _thispt = _this.parent();
-		var _target = _thispt.find(".dp2");
-		if(_thispt.hasClass("on")){
-			_thispt.removeClass("on");
-			_target.slideUp();
-		} else{$(".navlist > li").removeClass("on");
-			_thispt.addClass("on");
-			$(".navlist .dp2").slideUp();
-			_target.slideDown();
-			}
+jQuery(document).ready(function(){
+	$(".navlist > li").mouseover(function(){
+		if($(this).find(".submenu").length > 0){
+			$(this).find(".submenu").stop().slideDown(500);
+		} 
 	});
-	$('.tabmenu > li').click(function(){
-		var tab_id = $(this).attr('data-tab');
-		
-		$('.tabmenu > li').removeClass('active');
-		$('.tab-content').removeClass('active');
-		
-		$(this).addClass('active');
-		$("#"+tab_id).addClass('active');
-		
-		return false;
+	$(".navlist > li").mouseout(function(){
+		$(this).find(".submenu").stop().slideUp(500);
 	});
 	
-	var gall = setInterval(galleryFun, 5000);
+	$('.trigger').on('click', function(){
+		$('.modal_contact').toggleClass('open');
+		return false;
+	})
+	$('#copy_email').click(function(){
+		$('#textbox_email').select()
+		document.execCommand("copy")
+		alert('E-mail 주소가 복사 되었습니다.')
+	});
+	
+	$(".bar_fill").each(function(){
+		var $this = $(this);
+		var per = $this.attr('per');
+		$this.css('width', per + "%");
+	});
+	
+	var $header = $('header');
+	var $page = $('.about_set');
+	var $window = $(window);
+	var pageOffsetTop = $page.offset().top;
+	
+	$window.resize(function(){
+		pageOffsetTop = $page.offset().top;
+	});
+	
+	$window.on('scroll', function(){
+		var scrolled = $window.scrollTop() >= pageOffsetTop;
+		$header.toggleClass('white', scrolled);
+	});
+	
+	var gall = setInterval(galleryFun,2000);
 	var inter = true;
 	var idx = 2;
+	
 	function galleryFun(){
-		$(".tab-content > ul").animate({
-			"left":-300*idx+"px"
+		$(".art_inner > ul").animate({
+			"left":-320*idx+"px"
 		},300);
-		$(".g_item > ul > li").eq(idx-1).addClass("on").silbling().removeClass("on");
+		$(".g_item > ul > li").eq(idx-1).addClass("on").siblings().removeClass("on");
 		idx++;
-		if(idx> $(".tab-content > ul > li").length-3){
-			$(".tab-content > ul").animate({
+		if(idx> $(".art_inner > ul > li").length-3){
+			$(".art_inner > ul").animate({
 				"left":0
 			},0);
 			idx=0;
-			}
 		}
-	$(".tab-content, .g_item").hover(function(){
+	}
+	
+	$(".art_inner , .g_item").hover(function(){
 		if(inter==true){
 			clearInterval(gall);
 			inter=false;
 		}
 	},function(){
 		if(inter==false){
-			gall = setInterval(galleryFun,5000);
+			gall = setInterval(galleryFun,2000);
 			inter=true;
 		}
 	});
@@ -63,19 +71,9 @@ $(function(){
 	$(".g_item > ul > li").on('click',function(){
 		$(this).addClass("on").siblings().removeClass("on");
 		idx = $(this).index()+1;
-		$("tab-content > ul").animate({
+		$(".art_inner > ul").animate({
 			"left":-300*idx+"px"
 		},1000);
 	});
-
+	
 });
-
-
-
-
-
-
-
-
-
-
