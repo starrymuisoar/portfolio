@@ -43,15 +43,16 @@ jQuery(document).ready(function(){
 	var idx = 2;
 	
 	function galleryFun(){
+		
 		$(".art_inner > ul").animate({
 			"left":-320*idx+"px"
 		},300);
 		$(".g_item > ul > li").eq(idx-1).addClass("on").siblings().removeClass("on");
 		idx++;
-		if(idx> $(".art_inner > ul > li").length-3){
+		if(idx> $(".art_inner > ul > li").length-1){
 			$(".art_inner > ul").animate({
 				"left":0
-			},0);
+			},200);
 			idx=0;
 		}
 	}
@@ -72,8 +73,39 @@ jQuery(document).ready(function(){
 		$(this).addClass("on").siblings().removeClass("on");
 		idx = $(this).index()+1;
 		$(".art_inner > ul").animate({
-			"left":-300*idx+"px"
-		},1000);
+			"left":-320*idx+"px"
+		},300);
 	});
 	
+	var modals = document.getElementsByClassName("modal");
+	var btns = document.getElementsByClassName("btn_more_2");
+	var spanes = document.getElementsByClassName("c_btn");
+	var funcs = [];
+	
+	function Modal(num) {
+		return function(){
+			btns[num].onclick = function(){
+				modals[num].style.display = "block";
+				return false;
+			};
+			
+			spanes[num].onclick = function(){
+				modals[num].style.display = "none";
+			};
+		};
+	}
+	
+	for(var i = 0; i < btns.length; i++){
+		funcs[i] = Modal(i);
+	}
+	
+	for(var j = 0; j < btns.length; j++){
+		funcs[j]();
+	}
+	
+	window.onclick = function(event){
+		if(event.target.className == "modal"){
+			event.target.style.display = "none";
+		}
+	};
 });
