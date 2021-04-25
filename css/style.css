@@ -106,6 +106,10 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 	text-decoration:underline;
 }
 
+header.white {
+	background:#fff;
+}
+
 .modal_contact {
 	width:100%;
 	height:100%;
@@ -516,26 +520,30 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 }
 
 .art_set .art_inner {
-	width:66.67%;
+	width:960px;
 	margin:0 auto;
 	position:relative;
+	overflow:hidden;
 }
 
 .art_set .art_inner .slides {
-	width:78.12%;
+	width:320%;
 	margin:0 auto;
-	padding-top:80px;
+	padding-top:120px;
+	position:relative;
+	left:-320px;
 }
 
 .art_set .art_inner .slides > li {
 	display:flex;
 	flex-direction:column;
-	width:450px;
-	margin:0 auto;
+	width:300px;
+	margin-left:20px;
 	position:relative;
 	text-align:center;
 	color:#fff;
 	font-family:'Roboto-Bold';
+	float:left;
 }
 
 .art_set .art_inner .slides > li > img {
@@ -579,7 +587,26 @@ header .header_inner nav .navlist > li > .submenu > li > a:hover {
 	color:#fff;
 }
 
-.art_set .modal {}
+.g_item {
+	position:relative;
+	top:20px;
+	width:900px;
+	margin:0 auto;
+	text-align:center;
+}
+
+.g_item > ul > li {
+	display:inline-block;
+	margin-right:10px; 
+	background:#fff;
+	width:10px;
+	height:10px;
+	border-radius:50%;
+}
+
+.g_item > ul > li.on {background:#d84863}
+
+.art_set .modal {display:none;}
 
 .art_set .modal.active {}
 
