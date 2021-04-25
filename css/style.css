@@ -531,7 +531,7 @@ header.white {
 	margin:0 auto;
 	padding-top:120px;
 	position:relative;
-	left:-320px;
+	left:-20px;
 }
 
 .art_set .art_inner .slides > li {
@@ -606,23 +606,53 @@ header.white {
 
 .g_item > ul > li.on {background:#d84863}
 
-.art_set .modal {display:none;}
+.art_set .modal {
+	width:100%;
+	position:relative;
+	display:none;
+}
 
-.art_set .modal.active {}
+.art_set .modal .modal_up {
+	position:absolute;
+	width:30%;
+	top:-570px;
+	left:33%;
+	transition:all .4s;
+	padding:30px;
+	border:1px solid #c3c3c3;
+	border-radius:5px;
+	box-shadow:0 1px 6px 0 rgba(32,32,36,.28);
+	background:rgba(255,255,255,1)
+}
 
-.art_set .modal .modal_up {}
+.art_set .modal.modal2 .modal_up {
+	width:50%;
+	left:23%;
+}
 
-.art_set .modal.active .modal_up {}
+.art_set .modal.modal5 .modal_up {
+	width:50%;
+	left:23%;
+}
 
-.art_set .modal .modal_up .modal_art {}
+.art_set .modal.modal6 .modal_up {
+	width:50%;
+	left:23%;
+}
 
-.art_set .modal .modal_up .modal_art img {}
+.art_set .modal .modal_up .modal_art {
+	top:-700px;
+}
 
-.art_set .modal .modal_up .btn {
+.art_set .modal .modal_up .modal_art img {
+	width:100%;
+}
+
+.art_set .modal .modal_up .c_btn {
 	text-align:center;
 }
 
-.art_set .modal .modal_up .btn button {
+.art_set .modal .modal_up .c_btn button {
 	padding:6px 12px;
 	color:#fff;
 	border:none;
